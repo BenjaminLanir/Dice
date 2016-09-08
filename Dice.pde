@@ -1,25 +1,35 @@
+int sum = 0;
+int click = 0;
 void setup()
 {
 	noLoop();
-	size(400, 400);
+	size(1200, 900);
 }
 void draw()
 {
     //your code here
 	background(255);
-    for (int y = 5; y < 300; y = y + 50)
+    for (int y = 5; y < 800; y = y + 50)
     {
-    	for (int x = 5; x < 400; x = x + 50)
+    	for (int x = 5; x < 1200; x = x + 50)
     	{
     		Die orange = new Die(x, y);
     		orange.roll();
     		orange.show();
+    		sum = sum + orange.diceCounter;
     	}
     }
+    stroke(0);
+	fill(0);
+	textSize(20);
+	text("Total Role is " + sum, 440, 850);
+	text("Times Clicked:" + click, 440, 875);
 }
 void mousePressed()
 {
 	redraw();
+	sum = 0;
+	click = click + 1;
 }
 class Die //models one single dice cube
 {
