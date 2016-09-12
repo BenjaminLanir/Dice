@@ -1,5 +1,12 @@
 int sum = 0;
 int click = 0;
+int numRoll = 0;
+int rollOne = 0;
+int rollTwo = 0;
+int rollThree = 0;
+int rollFour = 0;
+int rollFive = 0;
+int rollSix = 0;
 void setup()
 {
 	noLoop();
@@ -24,6 +31,14 @@ void draw()
 	textSize(20);
 	text("Total Role is " + sum, 440, 850);
 	text("Times Clicked:" + click, 440, 875);
+	System.out.println(numRoll);
+	text("Total Roles:" + numRoll, 100, 850);
+	text("Rolled One:" + rollOne, 100, 870);
+	text("Rolled Two:" + rollTwo, 100, 890);
+	text("Rolled Three:" + rollThree, 300, 850);
+	text("Rolled Four:" + rollFour, 300, 870);
+	text("Rolled Five:" + rollFive, 300, 890);
+	text("Rolled Six:" + rollSix, 800, 850);
 }
 void mousePressed()
 {
@@ -51,17 +66,20 @@ class Die //models one single dice cube
 	  if(diceValue == 1)//your code here
 	  {
 		ellipse(myX + 20, myY + 20, 8, 8);
+		rollOne ++;
       }
 	  else if(diceValue == 2) 
 	  {	
 		ellipse(myX + 10, myY + 10, 8, 8);
 		ellipse(myX + 30, myY + 30, 8, 8);
+		rollTwo ++;
 	  }
 	  else if(diceValue == 3)
 	  {
 	  	ellipse(myX + 20, myY + 20, 8, 8);
 	  	ellipse(myX + 10, myY + 10, 8, 8);
 		ellipse(myX + 30, myY + 30, 8, 8);
+		rollThree ++;
 	  }
 	  else if(diceValue == 4)
 	  {
@@ -69,6 +87,7 @@ class Die //models one single dice cube
 	  	ellipse(myX + 30, myY + 10, 8, 8);
 	  	ellipse(myX + 10, myY + 30, 8, 8);
 	  	ellipse(myX + 30, myY + 30, 8, 8);
+	  	rollFour ++;
 	  }
 	  else if(diceValue == 5)
 	  {
@@ -77,6 +96,7 @@ class Die //models one single dice cube
 	  	ellipse(myX + 10, myY + 30, 8, 8);
 	  	ellipse(myX + 30, myY + 30, 8, 8);
 	  	ellipse(myX + 20, myY + 20, 8, 8);
+	  	rollFive ++;
 	  }
 	  else if(diceValue == 6)
 	  {
@@ -86,17 +106,13 @@ class Die //models one single dice cube
 	  	ellipse(myX + 30, myY + 30, 8, 8);
 	  	ellipse(myX + 10, myY + 20, 8, 8);
 	  	ellipse(myX + 30, myY + 20, 8, 8);
+	  	rollSix ++;
 	  }
 	}
 	void roll()
 	{
       diceValue = (int)((Math.random() * 6) + 1);
       diceCounter = diceCounter + diceValue;
-      	
+      numRoll ++;
 	}
 }
-/*
-	  stroke(0);
-	  fill(0);
-	  text("Total Role is " + diceCounter, 250, 350);
-	  */
