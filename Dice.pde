@@ -1,12 +1,18 @@
 int sum = 0;
 int click = 0;
 int numRoll = 0;
-int rollOne = 0;
-int rollTwo = 0;
-int rollThree = 0;
-int rollFour = 0;
-int rollFive = 0;
-int rollSix = 0;
+float rollOne = 0;
+float rollTwo = 0;
+float rollThree = 0;
+float rollFour = 0;
+float rollFive = 0;
+float rollSix = 0;
+float percentOne = 0;
+float percentTwo = 0;
+float percentThree = 0;
+float percentFour = 0;
+float percentFive = 0;
+float percentSix = 0;
 void setup()
 {
 	noLoop();
@@ -26,25 +32,29 @@ void draw()
     		sum = sum + orange.diceCounter;
     	}
     }
+    percentOne = rollOne / numRoll;
+    percentTwo = rollTwo / numRoll;
+    percentThree = rollThree / numRoll;
+    percentFour = rollFour / numRoll;
+    percentFive = rollFive / numRoll;
+    percentSix = rollSix / numRoll;
     stroke(0);
 	fill(0);
 	textSize(20);
 	text("Total Role is " + sum, 440, 850);
 	text("Times Clicked:" + click, 440, 875);
-	System.out.println(numRoll);
-	text("Total Roles:" + numRoll, 100, 850);
-	text("Rolled One:" + rollOne, 100, 870);
-	text("Rolled Two:" + rollTwo, 100, 890);
-	text("Rolled Three:" + rollThree, 300, 850);
-	text("Rolled Four:" + rollFour, 300, 870);
-	text("Rolled Five:" + rollFive, 300, 890);
-	text("Rolled Six:" + rollSix, 800, 850);
+	text("Percent One: " + percentOne * 100 + " %", 50, 850);
+	text("Percent Two: " + percentTwo * 100 + " %", 50, 870);
+	text("Percent Three: " + percentThree * 100 + " %", 50, 890);
+	text("Percent Four: " + percentFour * 100 + " %", 700, 850);
+	text("Percent Five: " + percentFive * 100 + " %", 700, 870);
+	text("Percent Six: " + percentSix * 100 + " %", 700, 890);
 }
 void mousePressed()
 {
-	redraw();
-	sum = 0;
-	click = click + 1;
+	  redraw();
+	  sum = 0;
+	  click = click + 1;
 }
 class Die //models one single dice cube
 {
