@@ -22,7 +22,7 @@ void draw()
 {
     //your code here
 	background(255);
-    for (int y = 5; y < 800; y = y + 50)
+    for (int y = 5; y < 650; y = y + 50)
     {
     	for (int x = 5; x < 1200; x = x + 50)
     	{
@@ -43,12 +43,20 @@ void draw()
 	textSize(20);
 	text("Total Role is " + sum, 440, 850);
 	text("Times Clicked:" + click, 440, 875);
-	text("Percent One: " + percentOne * 100 + " %", 50, 850);
-	text("Percent Two: " + percentTwo * 100 + " %", 50, 870);
-	text("Percent Three: " + percentThree * 100 + " %", 50, 890);
-	text("Percent Four: " + percentFour * 100 + " %", 700, 850);
-	text("Percent Five: " + percentFive * 100 + " %", 700, 870);
-	text("Percent Six: " + percentSix * 100 + " %", 700, 890);
+	text("Percent One: " + percentOne * 100 + " %", 50, 700);
+	text("Percent Two: " + percentTwo * 100 + " %", 50, 720);
+	text("Percent Three: " + percentThree * 100 + " %", 50, 740);
+	text("Percent Four: " + percentFour * 100 + " %", 50, 760);
+	text("Percent Five: " + percentFive * 100 + " %", 50, 780);
+	text("Percent Six: " + percentSix * 100 + " %", 50, 800);
+	line(800, 700, 800, 850);
+	line(800, 850, 1040, 850);
+	rect(820, 850 - percentOne * 600, 20, percentOne * 600);
+	rect(860, 850 - percentTwo * 600, 20, percentTwo * 600);
+	rect(900, 850 - percentThree * 600, 20, percentThree * 600);
+	rect(940, 850 - percentFour * 600, 20, percentFour * 600);
+	rect(980, 850 - percentFive * 600, 20, percentFive * 600);
+	rect(1020, 850 - percentFive * 600, 20, percentFive * 600);
 }
 void mousePressed()
 {
