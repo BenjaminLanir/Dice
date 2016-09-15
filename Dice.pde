@@ -41,8 +41,8 @@ void draw()
     stroke(0);
 	fill(0);
 	textSize(20);
-	text("Total Role is " + sum, 440, 850);
-	text("Times Clicked:" + click, 440, 875);
+	text("Total Role is " + sum, 500, 750);
+	text("Times Clicked:" + click, 500, 775);
 	text("Percent One: " + percentOne * 100 + " %", 50, 700);
 	text("Percent Two: " + percentTwo * 100 + " %", 50, 720);
 	text("Percent Three: " + percentThree * 100 + " %", 50, 740);
@@ -52,11 +52,17 @@ void draw()
 	line(800, 700, 800, 850);
 	line(800, 850, 1040, 850);
 	rect(820, 850 - percentOne * 600, 20, percentOne * 600);
+	text("1", 825, 880);
 	rect(860, 850 - percentTwo * 600, 20, percentTwo * 600);
+	text("2", 865, 880);
 	rect(900, 850 - percentThree * 600, 20, percentThree * 600);
+	text("3", 905, 880);
 	rect(940, 850 - percentFour * 600, 20, percentFour * 600);
+	text("4", 945, 880);
 	rect(980, 850 - percentFive * 600, 20, percentFive * 600);
-	rect(1020, 850 - percentFive * 600, 20, percentFive * 600);
+	text("5", 985, 880);
+	rect(1020, 850 - percentSix * 600, 20, percentSix * 600);
+	text("6", 1025, 880);
 }
 void mousePressed()
 {
