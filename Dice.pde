@@ -63,6 +63,7 @@ void draw()
 	text("5", 985, 880);
 	rect(1020, 850 - percentSix * 600, 20, percentSix * 600);
 	text("6", 1025, 880);
+	text("Visual Representation of Roll Percentages", 770, 690);
 }
 void mousePressed()
 {
